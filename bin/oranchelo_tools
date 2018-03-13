@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'oranchelo_tools'
+
+puts "OrancheloTools saying 'Hello World!' from v#{OrancheloTools::VERSION}"
