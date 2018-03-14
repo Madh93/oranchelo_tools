@@ -1,5 +1,8 @@
-require "oranchelo_tools/version"
+require 'oranchelo_tools/commands'
+require 'oranchelo_tools/version'
 
 module OrancheloTools
-  # Your code goes here...
+  GEM_NAME = 'oranchelo_tools'.freeze
+  PACKAGE_NAME = 'oranchelo-icon-theme'.freeze
+  THEME_NAME = 'Oranchelo Icon Theme'.freeze
 end

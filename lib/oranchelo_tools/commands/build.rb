@@ -6,7 +6,7 @@ module OrancheloTools
     class Build < Command
       def initialize
         super do |opts|
-          opts.banner = "Usage: #{::GEM_NAME} build [options]"
+          opts.banner = "Usage: #{GEM_NAME} build [options]"
 
           # Add options
           specify_package_option(opts)
@@ -20,15 +20,15 @@ module OrancheloTools
 
       private
 
-      def specify_version_option(opts)
-        opts.on('-v', '--version=VERSION', "#{::THEME_NAME} release version") do |v|
-          args.version = v
-        end
-      end
-
       def specify_package_option(opts)
         opts.on('-p', '--package=TYPE', 'Target package type') do |p|
           args.package = p
+        end
+      end
+
+      def specify_version_option(opts)
+        opts.on('-v', '--version=VERSION', "#{THEME_NAME} release version") do |v|
+          args.version = v
         end
       end
 
