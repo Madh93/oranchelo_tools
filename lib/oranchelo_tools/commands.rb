@@ -4,7 +4,9 @@ module OrancheloTools
   module Commands
 
     def self.classes
-      @classes ||= constants.select { |c| const_get(c).is_a? Class }
+      @classes ||= constants.select do |c|
+        const_get(c).is_a?(Class) && (c !~ /Command/)
+      end
     end
 
     def self.all
