@@ -1,11 +1,12 @@
 require 'oranchelo_tools/commands/build'
+require 'oranchelo_tools/commands/none'
 
 module OrancheloTools
   module Commands
 
     def self.classes
       @classes ||= constants.select do |c|
-        const_get(c).is_a?(Class) && (c !~ /Command|None/)
+        const_get(c).is_a?(Class) && (c !~ /Command/)
       end
     end
 
