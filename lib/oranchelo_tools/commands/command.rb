@@ -7,8 +7,16 @@ module OrancheloTools
 
       attr_accessor :args
 
+      def self.to_s
+        name.split('::').last.downcase
+      end
+
       def initialize
         super
+      end
+
+      def empty?
+        args.values.all?(&:nil?)
       end
     end
   end
