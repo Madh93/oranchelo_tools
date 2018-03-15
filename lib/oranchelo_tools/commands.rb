@@ -5,7 +5,7 @@ module OrancheloTools
 
     def self.classes
       @classes ||= constants.select do |c|
-        const_get(c).is_a?(Class) && (c !~ /Command/)
+        const_get(c).is_a?(Class) && (c !~ /Command|None/)
       end
     end
 
