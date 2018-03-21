@@ -6,7 +6,7 @@ module OrancheloTools
     class Build < Command
       def initialize
         super do |opts|
-          opts.banner = "Usage: #{GEM_NAME} build [options]"
+          opts.banner = "Usage: #{GEM_NAME} #{name} [options]"
 
           # Add options
           specify_package_option(opts)
