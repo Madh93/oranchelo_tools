@@ -1,3 +1,4 @@
+require 'oranchelo_tools/builder'
 require 'oranchelo_tools/commands'
 require 'oranchelo_tools/version'
 

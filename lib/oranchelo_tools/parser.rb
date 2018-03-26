@@ -16,7 +16,7 @@ module OrancheloTools
       # Parse built-in commands
       if (command = commands[options.shift])
         command.order!(options)
-        return command.args unless command.empty?
+        return [command.name, command.args] unless command.empty?
         puts command.help
       else
         puts commands['none'].help
