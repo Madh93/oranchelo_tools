@@ -9,16 +9,23 @@ module OrancheloTools
           opts.banner = "Usage: #{GEM_NAME} #{name} [options]"
 
           # Add options
+          specify_from_file_option(opts)
           specify_package_option(opts)
           specify_version_option(opts)
           show_help_option(opts)
         end
 
         # Set available arguments
-        self.args = Struct.new(:package, :version).new
+        self.args = Struct.new(:from_file, :package, :version).new
       end
 
       private
+
+      def specify_from_file_option(opts)
+        opts.on('-f', '--from-file=FILE', 'YAML file with build targets') do |f|
+          args.from_file = f
+        end
+      end
 
       def specify_package_option(opts)
         opts.on('-p', '--package=TYPE', 'Target package type') do |p|
