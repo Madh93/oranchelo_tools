@@ -51,3 +51,7 @@ Gemfile.lock
 
 # Rspec
 .rspec_status
+
+# Logs
+/log/
+*.log
