@@ -5,7 +5,7 @@ require 'oranchelo_tools/parser'
 
 # Parse command-line arguments
 command, arguments = OrancheloTools::Parser.parse(ARGV)
-OrancheloTools.logger.debug "Run '#{command}' command. Arguments: '#{arguments}'"
+OrancheloTools.logger.debug "Running '#{command}' command. Arguments: '#{arguments}'"
 
 # Run specified command
 case command
