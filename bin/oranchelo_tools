@@ -12,5 +12,5 @@ case command
 when 'build'
   OrancheloTools::Builder.new(arguments).run
 else
-  OrancheloTools.loggger.info "Command #{command} not found."
+  OrancheloTools.logger.info "Command #{command} not found."
 end
