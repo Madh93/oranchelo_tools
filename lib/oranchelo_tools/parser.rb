@@ -13,7 +13,7 @@ module OrancheloTools
 
       # Parse built-in commands
       if (command = commands[options.shift])
-        return parse_subcommand(command)
+        parse_subcommand(command)
       else
         logger.debug 'Unknown command passed'
         show_help(commands['none'])
@@ -25,13 +25,12 @@ module OrancheloTools
 
       command.order!(options)
       return [command.name, command.args] unless command.empty?
-      logger.debug 'Unknown arguments passed'
+      logger.debug 'No arguments passed'
       show_help(command)
     end
 
     def self.show_help(command)
       puts command.help
-      exit
     end
 
     def self.commands
