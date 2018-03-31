@@ -10,7 +10,7 @@ module OrancheloTools
       attr_accessor :args
 
       def self.to_s
-        name.demodulize
+        name.demodulize.downcase
       end
 
       def initialize
@@ -22,7 +22,7 @@ module OrancheloTools
       end
 
       def name
-        self.class.name.demodulize
+        self.class.name.demodulize.downcase
       end
     end
   end

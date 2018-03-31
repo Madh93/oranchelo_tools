@@ -5,7 +5,7 @@ module OrancheloTools
 
       refine String do
         def demodulize
-          empty? ? self : split('::').last.downcase
+          empty? ? self : split('::').last
         end
       end
     end
