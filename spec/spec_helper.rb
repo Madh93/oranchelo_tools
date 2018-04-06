@@ -1,10 +1,11 @@
-require 'bundler/setup'
-require 'oranchelo_tools'
-
 if ENV['TRAVIS']
   require 'coveralls'
   Coveralls.wear!
 end
+
+require 'bundler/setup'
+require 'oranchelo_tools'
+
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
